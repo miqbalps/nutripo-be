@@ -1,0 +1,75 @@
+###
+GET http://localhost:5000/recipes
+####
+GET http://localhost:5000/recipes/11
+###
+POST http://localhost:5000/recipes
+content-type: application/json
+
+{
+    "title": "Nasi Goreng Special",
+    "description": "Indonesian fried rice with special ingredients",
+    "prepTime": 10,
+    "cookTime": 15,
+    "difficulty": "Medium",
+    "ingredients": "Rice, eggs, chicken, vegetables, soy sauce, spices",
+    "steps": "1. Heat oil in wok\n2. Sauté garlic and spices\n3. Add rice and ingredients\n4. Stir-fry until cooked",
+    "analysis": {
+        "calories": 450,
+        "protein": "15g",
+        "carbs": "65g",
+        "fat": "12g"
+    },
+    "bookmark": 0,
+    "image": "https://images.unsplash.com/photo-1680674814945-7945d913319c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "categoryId": 1
+}
+
+###
+PATCH  http://localhost:5000/recipes/2
+Content-Type: application/json
+
+{
+    "title": "Nasi Goreng Special",
+    "description": "Indonesian fried rice with special ingredients",
+    "prepTime": 10,
+    "cookTime": 15,
+    "difficulty": "Medium",
+    "ingredients": "Rice, eggs, chicken, vegetables, soy sauce, spices",
+    "steps": "1. Heat oil in wok\n2. Sauté garlic and spices\n3. Add rice and ingredients\n4. Stir-fry until cooked",
+    "analysis": {
+        "calories": 450,
+        "protein": "15g",
+        "carbs": "65g",
+        "fat": "12g"
+    },
+    "bookmark": 0,
+    "image": "https://images.unsplash.com/photo-1680674814945-7945d913319c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "categoryId": 1
+}
+
+###
+DELETE http://localhost:5000/recipes/1
+
+###
+GET http://localhost:5000/categories
+####
+GET http://localhost:5000/categories/1
+###
+POST http://localhost:5000/categories
+content-type: application/json
+
+{
+    "name": "Dessert", "icon": "<GiFruitBowl />"
+}
+
+###
+PATCH  http://localhost:5000/categories/5
+Content-Type: application/json
+
+{
+    "name": "Dessert", "icon": "GiFruitBowl"
+}
+
+###
+DELETE http://localhost:5000/categories/1
